@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de plantões | Jaleco &amp; Patrimônio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body style="margin:0">
+<div id="pz-root">
+<div class="pagina modo-capa" id="pagina">
+<main>
+
+<div id="capa">
+
+<div class="cad" data-capa-painel="calc">
+<div class="cad-main">
+<div class="cad-grid">
+<div class="cad-copy">
+<div class="cad-logo"><strong class="marca">Jaleco &amp; Patrimônio</strong></div>
+<p class="cad-eyebrow">TIRAR O JALECO</p>
+<h1>Quando você vai poder <span>tirar o jaleco?</span></h1>
+<ul class="cad-chips">
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2.5"></rect><path d="M9 7h6M9 11h6M9 15h2"></path></svg>Simulador para médicos</li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12v8H4v-8"></path><path d="M2 7h20v5H2z"></path><path d="M12 20V7"></path></svg>Gratuito</li>
+</ul>
+<p class="cad-desc">Em 6 perguntas, calcule <strong>a data em que seus investimentos pagam a sua renda</strong> e veja <strong>o que encurta esse caminho</strong> no seu caso.</p>
+<div class="cad-cta">
+<button type="button" class="cad-btn js-comecar" id="btn-hero"><span id="cad-btn-txt">Calcular quando posso parar</span> <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+<ul class="cad-meta">
+<li>6 perguntas</li>
+<li>Só números, sem documentos</li>
+<li>Sem custo</li>
+</ul>
+</div>
+</div>
+<div class="cad-visual">
+
+<div class="cad-phone" role="img" aria-label="Exemplo ilustrativo da tela de resultado da calculadora Tirar o Jaleco">
+<div class="cad-screen" aria-hidden="true">
+<span class="cad-notch"></span>
+<div class="cad-app-top">
+<span class="cad-app-marca"><strong class="marca">Jaleco &amp; Patrimônio</strong></span>
+<div class="cad-app-linha">
+<span class="cad-app-btn"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg></span>
+<span class="cad-app-icone"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3"></rect><path d="M8 3v4M16 3v4M3.5 10h17M9.5 15h5"></path></svg></span>
+<span class="cad-app-titulo">Tirar o Jaleco</span>
+<span class="cad-app-btn"><svg viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4z"></path><path d="M13.5 6.5l4 4"></path></svg></span>
+</div>
+<span class="cad-app-sub">Seu resultado</span>
+<div class="cad-tabs"><span>Resultado</span><span>Como chegamos</span><span>Como reduzir</span></div>
+</div>
+<div class="cad-app-body">
+<div class="cad-hero-card">
+<div class="cad-card-topo"><small>Plantões que faltam</small><svg class="cad-i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><circle cx="12" cy="7.8" r="0.6"></circle></svg></div>
+<strong>600</strong>
+<em>São 5 anos no seu ritmo de hoje × 10 plantões por mês.</em>
+</div>
+<div class="cad-mini">
+<div><svg class="cad-i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><circle cx="12" cy="7.8" r="0.6"></circle></svg><small>Tempo até parar</small><strong>5 anos</strong><em>você chega lá aos 45</em></div>
+<div><svg class="cad-i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><circle cx="12" cy="7.8" r="0.6"></circle></svg><small>Quanto você quer receber por mês sem trabalhar</small><strong>R$ 10.000</strong><em>em valores de hoje</em></div>
+<div><svg class="cad-i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><circle cx="12" cy="7.8" r="0.6"></circle></svg><small>Quanto precisa ter investido</small><strong>R$ 1,6 mi</strong><span class="cad-bar"><i></i></span><em>você tem 40%</em></div>
+<div><svg class="cad-i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><circle cx="12" cy="7.8" r="0.6"></circle></svg><small>Seus investimentos já rendem o equivalente a</small><strong>3,0</strong><em>plantões por mês</em></div>
+</div>
+<span class="cad-link">Entenda a conta →</span>
+<div class="cad-peek"><b>Como chegamos nesse número</b><span>Você pode parar quando o rendimento paga a renda que você quer.</span></div>
+</div>
+<div class="cad-cta-mock"><small>Conversa sem compromisso com a Jaleco &amp; Patrimônio</small><span>Quero reduzir esse número</span></div>
+</div>
+</div>
+<div class="cad-prova">
+<p>Exemplo ilustrativo. O seu resultado depende dos seus números.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="capa-painel" data-capa-painel="sobre" hidden="">
+<div class="capa-topo"><strong class="marca">Jaleco &amp; Patrimônio</strong><span>Tirar o Jaleco</span></div>
+
+<section class="ct ct-claro" aria-labelledby="ct-como-titulo">
+<div class="ct-wrap">
+<p class="ct-eyebrow">Como funciona</p>
+<h2 class="ct-h2" id="ct-como-titulo">Sua conta pronta <span>em poucos minutos</span></h2>
+<ol class="ct-passos">
+<li class="ct-passo">
+<span class="ct-num" aria-hidden="true">01</span>
+<h3>Você responde 6 perguntas</h3>
+<p>Idade, plantões, quanto recebe e quanto já investiu. Só números, sem documentos.</p>
+</li>
+<li class="ct-passo">
+<span class="ct-num" aria-hidden="true">02</span>
+<h3>Recebe sua conta</h3>
+<p>Preencha nome, e-mail e WhatsApp para ver quantos plantões faltam e quantos dá pra cortar.</p>
+</li>
+<li class="ct-passo">
+<span class="ct-num" aria-hidden="true">03</span>
+<h3>Revisa com um especialista</h3>
+<p>30 minutos, por vídeo ou presencial. Um especialista refaz a conta com a sua carteira e mostra os próximos passos.</p>
+</li>
+</ol>
+</div>
+</section>
+
+<section class="ct ct-escuro" aria-labelledby="ct-res-titulo">
+<div class="ct-wrap">
+<p class="ct-eyebrow">No seu resultado</p>
+<h2 class="ct-h2" id="ct-res-titulo">O que a conta <span>mostra</span></h2>
+<p class="ct-lead">Tudo calculado com os seus números, em valores de hoje.</p>
+<button type="button" class="ct-btn js-comecar">Fazer minha conta <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+<ul class="ct-cards">
+<li class="ct-card">
+<span class="ct-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3"></rect><path d="M8 3v4M16 3v4M3.5 10h17M9.5 15h5"></path></svg></span>
+<h3>Plantões que faltam</h3>
+<p>Quantos plantões ainda separam você da renda que quer, no seu ritmo de hoje.</p>
+</li>
+<li class="ct-card">
+<span class="ct-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
+<h3>Quando você pode parar</h3>
+<p>Em quantos anos, e com que idade, o seu dinheiro investido paga a sua renda.</p>
+</li>
+<li class="ct-card">
+<span class="ct-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span>
+<h3>Quantos dá pra cortar</h3>
+<p>O efeito de render um pouco mais e de investir um plantão a mais por mês.</p>
+</li>
+<li class="ct-card">
+<span class="ct-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"></path></svg></span>
+<h3>Plano com especialista</h3>
+<p>Uma estratégia para o seu caso: carteira, impostos e quanto investir por mês.</p>
+</li>
+</ul>
+</div>
+</section>
+
+
+<section class="ct ct-claro2" aria-labelledby="ct-pq-titulo">
+<div class="ct-wrap">
+<p class="ct-eyebrow">Por que a Jaleco &amp; Patrimônio</p>
+<h2 class="ct-h2" id="ct-pq-titulo">Uma conta feita <span>para quem dá plantão.</span></h2>
+<ul class="ct-lista">
+<li><h3>Feito para médicos</h3><p>Conhecemos a rotina de plantões, a renda que varia mês a mês e os riscos da profissão.</p></li>
+<li><h3>Acompanhamento de perto</h3><p>Revisamos o plano com você conforme a sua renda e o seu momento mudam.</p></li>
+<li><h3>Plano feito para você</h3><p>Construído a partir do seu objetivo, do seu prazo e do seu momento.</p></li>
+</ul>
+<p class="ct-frase">Parar deixa de ser um desejo quando <span>vira uma data.</span></p>
+</div>
+</section>
+
+<section class="ct ct-faixa" aria-labelledby="ct-faixa-titulo">
+<div class="ct-wrap">
+<h2 class="ct-h2" id="ct-faixa-titulo">Coloque uma data no <span>dia de tirar o jaleco.</span></h2>
+<p class="ct-lead">6 perguntas, seu resultado na hora e uma conversa com especialista.</p>
+<button type="button" class="ct-btn js-comecar">Calcular quando posso parar <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+</div>
+</section>
+</div>
+
+<div class="capa-painel capa-painel-duvidas" data-capa-painel="duvidas" hidden="">
+<div class="capa-topo"><strong class="marca">Jaleco &amp; Patrimônio</strong><span>Tirar o Jaleco</span></div>
+
+<section class="ct ct-claro" aria-labelledby="ct-faq-titulo">
+<div class="ct-wrap">
+<p class="ct-eyebrow">Dúvidas frequentes</p>
+<h2 class="ct-h2" id="ct-faq-titulo">Antes de começar</h2>
+<div class="ct-faq">
+
+<details><summary>Quem é a Jaleco &amp; Patrimônio?</summary><p>Substitua este texto pela apresentação da sua empresa.</p></details>
+<details><summary>A simulação tem algum custo?</summary><p>Não. A simulação e a primeira conversa com o especialista são gratuitas e sem compromisso.</p></details>
+<details><summary>Por que vocês pedem meus dados antes do resultado?</summary><p>Você responde as perguntas primeiro. Depois, informa nome, e-mail e WhatsApp para desbloquear o resultado, e assim um especialista da Jaleco &amp; Patrimônio pode preparar a conversa com os seus números.</p></details>
+<details><summary>Preciso de documentos ou extratos?</summary><p>Não. Só valores aproximados. Se quiser aprofundar na conversa, levar o extrato ajuda, mas é opcional.</p></details>
+<details><summary>Já tenho assessor. Faz sentido?</summary><p>Faz. A conta mostra quanto falta no seu ritmo de hoje e quanto ajustes pequenos mudam esse número. É uma segunda opinião, sem compromisso.</p></details>
+<details><summary>O que vocês fazem com as minhas respostas?</summary><p>Usamos para calcular o seu resultado e preparar a conversa com o especialista, conforme o Aviso de Privacidade e a LGPD.</p></details>
+</div>
+</div>
+</section>
+</div>
+</div>
+
+<section class="app" id="calculadora" aria-label="Calculadora Tirar o Jaleco" hidden="">
+
+<div class="app-topo">
+<div class="app-marca"><strong class="marca">Jaleco &amp; Patrimônio</strong></div>
+<div class="app-linha">
+<button type="button" class="icone-btn" id="btn-voltar" aria-label="Voltar">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>
+</button>
+<span class="app-icone" aria-hidden="true">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="3"></rect><path d="M8 3v4M16 3v4M3.5 10h17M9.5 15h5"></path></svg>
+</span>
+<p class="app-titulo">Tirar o Jaleco</p>
+<button type="button" class="icone-btn" id="btn-editar" aria-label="Editar dados" hidden="">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4z"></path><path d="M13.5 6.5l4 4"></path></svg>
+</button>
+</div>
+<p class="app-sub" id="app-sub">Descubra quantos plantões faltam pra você poder parar</p>
+</div>
+
+<nav class="abas-faixa" id="abas" aria-label="Seções do resultado" hidden="">
+<div class="abas">
+<button type="button" class="aba" id="aba-resultado" data-aba="resultado" aria-current="true">Resultado</button>
+<button type="button" class="aba" id="aba-como" data-aba="como">Como chegamos</button>
+<button type="button" class="aba" id="aba-reduzir" data-aba="reduzir">Como reduzir</button>
+</div>
+</nav>
+<div class="app-corpo">
+
+<section id="tela-perguntas" class="tela" aria-label="Perguntas">
+<div class="progresso">
+<div class="progresso-barra" aria-hidden="true"><span id="progresso-barra"></span></div>
+<span class="progresso-txt" id="progresso-txt" aria-live="polite">1 de 6</span>
+</div>
+<form id="form" novalidate="">
+<div class="perguntas-corpo">
+<div class="card pergunta">
+<label class="pergunta-titulo" for="idade">Quantos anos você tem?</label>
+<span class="pergunta-ajuda" id="ajuda-idade">A simulação vai até os 100 anos.</span>
+<div class="entrada">
+<input id="idade" name="idade" type="text" inputmode="numeric" enterkeyhint="next" autocomplete="off" placeholder="40" maxlength="3" aria-describedby="ajuda-idade">
+<span class="sufixo">anos</span>
+</div>
+<p class="erro" role="alert"></p>
+</div>
+<div class="card pergunta" hidden="">
+<label class="pergunta-titulo" for="rendaDesejada">Quanto você quer ter de renda passiva por mês?</label>
+<span class="pergunta-ajuda" id="ajuda-renda">O valor que cobriria seu padrão de vida sem você precisar trabalhar. Em valores de hoje.</span>
+<div class="entrada">
+<span class="prefixo">R$</span>
+<input id="rendaDesejada" name="rendaDesejada" type="text" inputmode="numeric" enterkeyhint="next" autocomplete="off" placeholder="10.000" data-moeda="" aria-describedby="ajuda-renda">
+</div>
+<p class="erro" role="alert"></p>
+</div>
+<div class="card pergunta" hidden="">
+<label class="pergunta-titulo" for="valorPlantao">Quanto você recebe, em média, por plantão?</label>
+<span class="pergunta-ajuda" id="ajuda-plantao">O valor líquido: o que cai na sua conta, já descontados os impostos.</span>
+<div class="entrada">
+<span class="prefixo">R$</span>
+<input id="valorPlantao" name="valorPlantao" type="text" inputmode="numeric" enterkeyhint="next" autocomplete="off" placeholder="2.000" data-moeda="" aria-describedby="ajuda-plantao">
+</div>
+<p class="erro" role="alert"></p>
+</div>
+<div class="card pergunta" hidden="">
+<label class="pergunta-titulo" for="plantoesMes">Quantos plantões você faz por mês?</label>
+<span class="pergunta-ajuda" id="ajuda-plantoes">Uma média dos últimos meses já basta.</span>
+<div class="entrada">
+<input id="plantoesMes" name="plantoesMes" type="text" inputmode="numeric" enterkeyhint="next" autocomplete="off" placeholder="10" maxlength="3" aria-describedby="ajuda-plantoes">
+<span class="sufixo">por mês</span>
+</div>
+<p class="erro" role="alert"></p>
+</div>
+<div class="card pergunta" hidden="">
+<label class="pergunta-titulo" for="patrimonio">Quanto você tem investido hoje?</label>
+<span class="pergunta-ajuda" id="ajuda-patrimonio">Só o que está aplicado e líquido. Não conte imóveis, carro ou consultório. Se não tiver, coloque 0.</span>
+<div class="entrada">
+<span class="prefixo">R$</span>
+<input id="patrimonio" name="patrimonio" type="text" inputmode="numeric" enterkeyhint="next" autocomplete="off" placeholder="500.000" data-moeda="" aria-describedby="ajuda-patrimonio">
+</div>
+<p class="erro" role="alert"></p>
+</div>
+<div class="card pergunta" hidden="">
+<label class="pergunta-titulo" for="aporte">Quanto você consegue investir por mês?</label>
+<span class="pergunta-ajuda" id="ajuda-aporte">Uma média, em valores de hoje. Se ainda não investe todo mês, coloque 0.</span>
+<div class="entrada">
+<span class="prefixo">R$</span>
+<input id="aporte" name="aporte" type="text" inputmode="numeric" enterkeyhint="go" autocomplete="off" placeholder="10.000" data-moeda="" aria-describedby="ajuda-aporte">
+</div>
+<p class="erro" role="alert"></p>
+</div>
+</div>
+<p class="privacidade">Depois da última pergunta, você desbloqueia o resultado com nome, e-mail e WhatsApp.</p>
+</form>
+</section>
+
+<section id="tela-lead" class="tela ld" hidden="">
+<span class="ld-cadeado"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"></rect><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"></path><circle cx="12" cy="15.5" r="1.3"></circle></svg></span>
+<p class="ld-eyebrow">Seu resultado está pronto</p>
+<h2 class="ld-titulo">Falta pouco para ver a sua data</h2>
+<p class="ld-texto">Seus números já foram calculados. Preencha seus dados para ver o resultado completo: quantos plantões faltam, como chegamos nesse número e quantos dá pra cortar.</p>
+<form id="ld-form" class="ld-form" novalidate="">
+<div class="ld-campo">
+<label for="ld-nome">Nome</label>
+<input type="text" id="ld-nome" name="nome" autocomplete="name" maxlength="80">
+<span class="ld-erro" role="alert"></span>
+</div>
+<div class="ld-campo">
+<label for="ld-email">E-mail</label>
+<input type="email" id="ld-email" name="email" placeholder="nome@email.com.br" autocomplete="email" inputmode="email" maxlength="120">
+<span class="ld-erro" role="alert"></span>
+</div>
+<div class="ld-campo">
+<label for="ld-tel">WhatsApp</label>
+<input type="tel" id="ld-tel" name="telefone" placeholder="(21) 91234-5678" autocomplete="tel-national" inputmode="tel" maxlength="16">
+<span class="ld-erro" role="alert"></span>
+</div>
+<div class="ld-campo">
+
+<label class="ld-check" for="ld-lgpd">
+<input type="checkbox" id="ld-lgpd" name="aviso_privacidade">
+<span>Autorizo o contato da Jaleco &amp; Patrimônio por WhatsApp para agendar a conversa e o tratamento dos meus dados, conforme o <a href="#">Aviso de Privacidade</a> e a LGPD.</span>
+</label>
+<span class="ld-erro" role="alert"></span>
+</div>
+<button type="submit" class="ld-btn" id="ld-btn">Liberar meu resultado <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+<p class="ld-nota">Sem custo e sem compromisso. Seus dados serão usados para preparar a conversa com um especialista da Jaleco &amp; Patrimônio.</p>
+</form>
+</section>
+
+<section id="tela-agenda" class="tela" hidden="">
+<div class="card ag-card" id="ag-box">
+<p class="ag-recap" id="ag-recap" hidden=""></p>
+<h2 class="sec-titulo" id="ag-titulo">Vamos ver quantos dá pra cortar?</h2>
+<p class="ag-texto" id="ag-texto">Numa conversa de 30 minutos, um especialista da Jaleco &amp; Patrimônio refaz a sua conta com <strong>a sua carteira, os seus impostos e o seu ritmo de investimento</strong>.</p>
+<form id="ag-form" class="ag-form" novalidate="">
+<p class="ag-rot" id="ag-dias-rot">Escolha o dia</p>
+<div class="ag-dias" id="ag-dias" role="radiogroup" aria-labelledby="ag-dias-rot"></div>
+<p class="ag-rot" id="ag-horas-rot">E o horário</p>
+<div class="ag-horas" id="ag-horas" role="radiogroup" aria-labelledby="ag-horas-rot"></div>
+<label class="ag-rot" for="ag-tel">WhatsApp para confirmarmos</label>
+<input type="tel" id="ag-tel" class="ag-input" inputmode="tel" autocomplete="tel-national" maxlength="16">
+<p class="ag-resumo" id="ag-resumo" aria-live="polite"></p>
+<p class="ag-erro" id="ag-erro" role="alert"></p>
+<button type="submit" class="btn ag-btn" id="ag-btn">Confirmar pré-agendamento</button>
+<p class="ag-nota">30 minutos, sem custo e sem compromisso. O horário é a sua preferência: um assessor confirma com você pelo WhatsApp em até 24 horas úteis.</p>
+</form>
+</div>
+
+<div class="ag-ok" id="ag-ok" hidden="" tabindex="-1">
+<div class="ok-hero">
+<span class="ok-check"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+<p class="ok-eyebrow">Pré-agendamento recebido</p>
+<h2 class="ok-titulo">Obrigado<span id="ok-nome"></span>!</h2>
+<p class="ok-texto" id="ok-texto-1"></p>
+<p class="ok-texto" id="ok-texto-2"></p>
+<ul class="ok-chips" id="ok-chips"></ul>
+</div>
+<div class="ok-resumo">
+<h3>Resumo da sua simulação</h3>
+<dl id="ok-resumo"></dl>
+</div>
+<section class="ok-bloco ok-claro" aria-labelledby="ok-pontos-titulo">
+<p class="ok-rot">Na conversa</p>
+<h3 class="ok-h3" id="ok-pontos-titulo">Os <span>3 pontos</span> que vamos olhar com você</h3>
+<p class="ok-sub">Identificados a partir das suas respostas. Cada um é aprofundado com o especialista.</p>
+<ol class="ok-lista">
+<li><span class="ok-num" aria-hidden="true">01</span><small>Ponto 1</small><b id="ok-p1-t"></b><p id="ok-p1"></p></li>
+<li><span class="ok-num" aria-hidden="true">02</span><small>Ponto 2</small><b id="ok-p2-t"></b><p id="ok-p2"></p></li>
+<li><span class="ok-num" aria-hidden="true">03</span><small>Ponto 3</small><b id="ok-p3-t"></b><p id="ok-p3"></p></li>
+</ol>
+<p class="ok-nota">Simulação ilustrativa, com base nas suas respostas. Não constitui recomendação de investimento.</p>
+</section>
+<section class="ok-bloco ok-escuro" aria-labelledby="ok-passos-titulo">
+<p class="ok-rot">Próximo passo</p>
+<h3 class="ok-h3" id="ok-passos-titulo">Você confirma <span>o melhor horário</span></h3>
+<p class="ok-sub">Nada de agenda automática: um assessor da Jaleco &amp; Patrimônio confirma pessoalmente com você o que fica bom.</p>
+<ol class="ok-etapas">
+<li><span aria-hidden="true">1</span><div><b>Um assessor te chama no WhatsApp</b><p>Para confirmar o agendamento e tirar dúvidas rápidas.</p></div></li>
+<li><span aria-hidden="true">2</span><div><b>Você confirma o horário</b><p>Se outro dia ficar melhor, é só responder a mensagem.</p></div></li>
+<li><span aria-hidden="true">3</span><div><b>Conversa de 30 minutos</b><p>Por vídeo ou presencial. O especialista refaz a sua conta com a sua carteira e mostra os próximos passos.</p></div></li>
+</ol>
+<div class="ok-acoes">
+<button type="button" class="ok-link" id="ag-voltar">Voltar ao meu resultado</button>
+<p>Prefere recomeçar? <button type="button" class="ok-link" id="ok-refazer">Fazer uma nova simulação</button></p>
+</div>
+</section>
+</div>
+<div class="card ag-prova" id="ag-prova"><p class="ag-rot">Quem conduz a conversa</p><p class="ag-texto">Um especialista da Jaleco &amp; Patrimônio. Os seus investimentos ficam em seu nome, e as decisões são sempre suas.</p></div>
+</section>
+
+<section id="tela-resultado" class="tela" hidden="">
+
+<section class="secao" id="painel-resultado" aria-label="Resultado" tabindex="-1">
+<div class="principal">
+<div class="ind-topo">
+<span class="principal-rot">Plantões que faltam</span>
+<button type="button" class="info" data-info="plantoes" aria-label="Como calculamos: plantões que faltam">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><circle cx="12" cy="7.8" r="0.6" fill="currentColor"></circle></svg>
+</button>
+</div>
+<p class="principal-numero" id="r-numero-box"><span class="principal-prefixo" id="r-numero-prefixo"></span><span id="r-numero"></span></p>
+<p class="principal-linha" id="r-numero-linha"></p>
+</div>
+<div class="indicadores">
+<div class="ind">
+<div class="ind-topo">
+<span class="ind-rot">Tempo até parar</span>
+<button type="button" class="info" data-info="tempo" aria-label="Como calculamos: tempo até parar">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><circle cx="12" cy="7.8" r="0.6" fill="currentColor"></circle></svg>
+</button>
+</div>
+<span class="ind-valor" id="i-tempo"></span>
+<span class="ind-sub" id="i-tempo-sub"></span>
+</div>
+<div class="ind">
+<div class="ind-topo">
+<span class="ind-rot">Quanto você quer receber por mês sem trabalhar</span>
+<button type="button" class="info" data-info="renda" aria-label="Como calculamos: quanto você quer receber por mês">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><circle cx="12" cy="7.8" r="0.6" fill="currentColor"></circle></svg>
+</button>
+</div>
+<span class="ind-valor" id="i-renda"></span>
+<span class="ind-sub">em valores de hoje</span>
+</div>
+<div class="ind">
+<div class="ind-topo">
+<span class="ind-rot">Quanto precisa ter investido</span>
+<button type="button" class="info" data-info="necessario" aria-label="Como calculamos: quanto precisa ter investido">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><circle cx="12" cy="7.8" r="0.6" fill="currentColor"></circle></svg>
+</button>
+</div>
+<span class="ind-valor" id="i-necessario"></span>
+<div class="ind-barra" aria-hidden="true"><span id="i-necessario-barra"></span></div>
+<span class="ind-sub" id="i-necessario-sub"></span>
+</div>
+<div class="ind">
+<div class="ind-topo">
+<span class="ind-rot">Seus investimentos já rendem o equivalente a</span>
+<button type="button" class="info" data-info="pagos" aria-label="Como calculamos: quanto seus investimentos já rendem">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><circle cx="12" cy="7.8" r="0.6" fill="currentColor"></circle></svg>
+</button>
+</div>
+<span class="ind-valor" id="i-pagos"></span>
+<span class="ind-sub" id="i-pagos-sub"></span>
+</div>
+</div>
+<button type="button" class="btn-texto link-conta" id="btn-entenda">
+Entenda a conta
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+</button>
+</section>
+
+<section class="secao" id="painel-como" aria-labelledby="titulo-como" tabindex="-1">
+<div class="card">
+<h2 class="sec-titulo" id="titulo-como">Como chegamos nesse número</h2>
+<p class="frase-chave">Você pode parar quando o rendimento paga a renda que você quer.</p>
+<ol class="corrente">
+<li class="elo">
+<span class="elo-num" aria-hidden="true">1</span>
+<div class="elo-corpo">
+<span class="elo-rot">Você quer receber por mês</span>
+<span class="elo-valor" id="c-renda"></span>
+</div>
+</li>
+<li class="elo">
+<span class="elo-num" aria-hidden="true">2</span>
+<div class="elo-corpo">
+<span class="elo-rot">Quanto precisa ter investido</span>
+<span class="elo-valor" id="c-necessario"></span>
+<p class="elo-exp" id="c-necessario-exp"></p>
+</div>
+</li>
+<li class="elo">
+<span class="elo-num" aria-hidden="true">3</span>
+<div class="elo-corpo">
+<span class="elo-rot">Você já tem</span>
+<span class="elo-valor" id="c-tem"></span>
+<p class="elo-exp" id="c-tem-exp"></p>
+</div>
+</li>
+<li class="elo">
+<span class="elo-num" aria-hidden="true">4</span>
+<div class="elo-corpo">
+<span class="elo-rot" id="c-tempo-rot"></span>
+<span class="elo-valor" id="c-tempo"></span>
+<p class="elo-exp" id="c-tempo-exp"></p>
+</div>
+</li>
+<li class="elo">
+<span class="elo-num" aria-hidden="true">5</span>
+<div class="elo-corpo">
+<span class="elo-rot" id="c-plantoes-rot">Até lá, mantendo sua rotina</span>
+<p class="elo-conta" id="c-plantoes"></p>
+</div>
+</li>
+</ol>
+<p class="nota nota-taxa" id="c-nota-taxa"></p>
+</div>
+
+
+<details class="card premissas-det" id="detalhes-conta">
+<summary>
+Ver detalhes da conta
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+</summary>
+<div class="premissas-corpo" id="c-detalhes"></div>
+</details>
+</section>
+
+<section class="secao" id="painel-reduzir" aria-labelledby="f-titulo" tabindex="-1">
+<h2 class="sec-titulo" id="f-titulo">Esse número pode ser bem menor.</h2>
+
+<div class="ganho" id="g-destaque-caixa">
+<p class="ganho-valor" id="g-destaque"></p>
+<p class="ganho-sub" id="g-destaque-sub"></p>
+</div>
+<div class="card" id="g-card">
+<h3 class="sub-titulo">Seu dinheiro investido até a meta</h3>
+<div class="grafico-caixa" id="grafico">
+<div class="balao" id="balao" hidden=""></div>
+</div>
+<ul class="legenda">
+<li><span class="leg-linha"></span>Com ajustes (hipotético)</li>
+<li><span class="leg-linha tracejada"></span>No ritmo de hoje</li>
+</ul>
+</div>
+
+
+<div class="card" id="s-card">
+<h3 class="sec-titulo">Um pouco a mais já muda tudo.</h3>
+<div class="alavancas">
+<div class="alavanca">
+<p class="alavanca-se" id="s-taxa-se"></p>
+<p class="alavanca-num" id="s-taxa-num"></p>
+<p class="alavanca-trad" id="s-taxa-trad"></p>
+</div>
+<div class="escada">
+<ol class="escada-lista" id="s-escada"></ol>
+<p class="escada-legenda">Quanto mais eficiente a carteira, mais plantões saem da conta.</p>
+</div>
+<div class="alavanca">
+<p class="alavanca-se" id="s-aporte-se"></p>
+<p class="alavanca-num" id="s-aporte-num"></p>
+<p class="alavanca-trad" id="s-aporte-trad"></p>
+</div>
+<div class="alavanca juntos">
+<p class="juntos-rot">Fazendo os dois:</p>
+<p class="juntos-num" id="s-juntos-num"></p>
+<p class="juntos-texto" id="s-juntos"></p>
+<p class="juntos-anos" id="s-juntos-anos"></p>
+</div>
+</div>
+<p class="nota nota-alavancas">Simulação ilustrativa. Rentabilidade não é garantida e pode ser maior ou menor.</p>
+</div>
+<div class="transicao">
+<p>Esses números usam ajustes pequenos.</p>
+<p>Com acompanhamento de perto, a tendência é ir além.</p>
+<p>É nisso que nossa equipe trabalha.</p>
+</div>
+
+<div class="card">
+<h3 class="sub-titulo">Como fazemos isso</h3>
+<ol class="frentes">
+<li class="frente">
+<span class="frente-icone" aria-hidden="true">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9"></path><path d="M12 3a9 9 0 0 1 9 9h-9z"></path></svg>
+</span>
+<div class="frente-corpo">
+<span class="frente-titulo">Carteira recomendada para o seu perfil</span>
+
+<p class="frente-texto">Montada para o seu perfil e o seu prazo.</p>
+</div>
+</li>
+<li class="frente">
+<span class="frente-icone" aria-hidden="true">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5L5 19"></path><circle cx="7" cy="7" r="2.5"></circle><circle cx="17" cy="17" r="2.5"></circle></svg>
+</span>
+<div class="frente-corpo">
+<span class="frente-titulo">Menos imposto no caminho</span>
+<p class="frente-texto">Organizamos como você investe e declara para pagar menos imposto.</p>
+</div>
+</li>
+<li class="frente">
+<span class="frente-icone" aria-hidden="true">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg>
+</span>
+<div class="frente-corpo">
+<span class="frente-titulo" id="f3-titulo">Investir todo mês, com método</span>
+<p class="frente-texto" id="f3-texto">Definimos quanto do que você ganha vira investimento todo mês.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="fecho"><p>Depende da sua carteira, dos seus impostos e do seu momento.</p><p id="fecho">É isso que calculamos com você.</p></div>
+
+
+
+
+<details class="card premissas-det" id="premissas-det">
+<summary>
+Ver premissas da simulação
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+</summary>
+<div class="premissas-corpo">
+<ul class="premissas-lista">
+<li id="premissa-taxa"></li>
+<li>O valor investido entra no início de cada mês.</li>
+<li>A simulação vai até os 100 anos.</li>
+<li>Considera que você mantém a rotina de plantões e de investimentos até lá.</li>
+<li>Não representa resultado da Jaleco &amp; Patrimônio nem promessa de ganho.</li>
+</ul>
+<p class="premissas-assinatura" id="r-assinatura"></p>
+</div>
+</details>
+<div class="refazer">
+<button type="button" class="btn-texto discreto" id="btn-refazer">Refazer do zero</button>
+</div>
+</section>
+</section>
+</div>
+</section>
+</main>
+
+<section class="lp-legal" aria-label="Aviso legal">
+<div class="lp-container">
+
+<p>Esta ferramenta foi desenvolvida pela Jaleco &amp; Patrimônio e tem caráter exclusivamente ilustrativo e educacional. As projeções apresentadas são estimativas baseadas em premissas definidas (ver premissas da simulação) e não representam recomendação de investimento nem garantia de rentabilidade. Rentabilidade passada não garante resultados futuros. Consulte um especialista antes de qualquer decisão financeira.</p>
+</div>
+</section>
+</div>
+<div id="pz-fixo">
+
+<nav class="capa-abas" id="capa-abas" data-fixo="" aria-label="Seções da página">
+<div class="capa-abas-dentro">
+<button type="button" class="capa-aba" data-capa-aba="calc" aria-current="true">
+<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2.5"></rect><path d="M8.5 6.5h7M8.5 11h.01M12 11h.01M15.5 11h.01M8.5 14.5h.01M12 14.5h.01M15.5 14.5h.01M8.5 18h.01M12 18h.01M15.5 18h.01"></path></svg>
+Calculadora
+</button>
+<button type="button" class="capa-aba" data-capa-aba="sobre">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"></path><path d="M3 12.5l9 5 9-5"></path><path d="M3 16.5l9 5 9-5"></path></svg>
+Sobre
+</button>
+<button type="button" class="capa-aba" data-capa-aba="duvidas">
+<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.1-2.4 3.6"></path><path d="M12 17.2h.01"></path></svg>
+Dúvidas
+</button>
+</div>
+</nav>
+<div class="barra-fixa" id="barra-perguntas" data-fixo="" hidden="">
+<button type="submit" class="btn" id="btn-continuar" form="form">Continuar</button>
+</div>
+<div class="barra-fixa" id="barra-cta" data-fixo="" hidden="">
+<p class="barra-linha" id="cta-linha" aria-live="polite">Conversa sem compromisso com a Jaleco &amp; Patrimônio</p>
+<button type="button" class="btn" id="btn-cta">Quero reduzir esse número</button>
+</div>
+<div class="sheet-fundo" id="sheet-fundo" data-fixo="" hidden="">
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-titulo" tabindex="-1">
+<div class="sheet-alca" aria-hidden="true"><span></span></div>
+<div class="sheet-topo">
+<h2 class="sheet-titulo" id="sheet-titulo"></h2>
+<button type="button" class="icone-btn" id="sheet-fechar" aria-label="Fechar">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+</button>
+</div>
+<p class="sheet-texto" id="sheet-texto"></p>
+</div>
+</div>
+</div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
