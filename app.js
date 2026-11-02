@@ -42,6 +42,8 @@ const SENSIBILIDADE = {
 taxaExtraAnual: GANHO_RENTABILIDADE_PP / 100,  // +1,5% a.a.
 plantoesExtraMes: 1,   // +1 plantão/mês de aporte
 };
+// Patrimônio necessário = renda mensal desejada × 250 (retirada de 0,4% ao mês)
+const MULTIPLICADOR_META = 250;
 const IDADE_LIMITE = 100;          // horizonte da simulação
 const GRAFICO_MESES_DEPOIS = 24;   // o gráfico vai até 2 anos depois da meta (no ritmo de hoje)
 const ID_GRAFICO_CLIP = "pz-grafico-clip";
@@ -135,14 +137,14 @@ function calcularConta(d, ajuste = {}) {
 const taxaReferencia = TAXA_REFERENCIA;                        // uma taxa só
 const taxaMensalRef = taxaMensalEquivalente(taxaReferencia);
 // viver do rendimento, sem consumir o principal
-const necessario = d.rendaDesejada / taxaMensalRef;
+const necessario = d.rendaDesejada * MULTIPLICADOR_META;
 const falta = Math.max(0, necessario - d.patrimonio);
 const limiteMeses = Math.max(0, (IDADE_LIMITE - d.idade) * 12);
 const taxaCrescimento = taxaReferencia + (ajuste.taxaExtra || 0);
 const aporte = d.aporte + (ajuste.aporteExtra || 0);
 const sim = simular({ patrimonio: d.patrimonio, aporte, taxaAnual: taxaCrescimento, alvos: [necessario], limiteMeses });
 const meses = sim.mesesMarco[0]; // 0 = já atingido; null = não chega até os 100
-const rendaPaga = d.patrimonio * taxaMensalRef;
+const rendaPaga = d.patrimonio / MULTIPLICADOR_META; // mesma regra da meta
 return {
 taxaReferencia, taxaCrescimento, aporte,
 necessario, falta, limiteMeses, meses,
@@ -497,13 +499,13 @@ if (d.patrimonio === 0) {
 pagos = "Você ainda não tem nada investido. Quando começar, o rendimento passa a pagar uma parte dos seus plantões.";
 } else {
 const qtd = c.plantoesPagos === 0 ? "menos de 0,1 plantão" : `${fmtUmaCasa.format(c.plantoesPagos)} ${pagosUnidade(c.plantoesPagos)}`;
-pagos = `Seus ${moedaCurta(d.patrimonio)} rendem cerca de ${moeda(c.rendaPaga)} por mês. Isso equivale a ${qtd} de ${moeda(d.valorPlantao)}.`;
+pagos = `Pela regra de 0,4% ao mês, seus ${moedaCurta(d.patrimonio)} já permitem retirar cerca de ${moeda(c.rendaPaga)} por mês. Isso equivale a ${qtd} de ${moeda(d.valorPlantao)}.`;
 }
 return {
 plantoes: { titulo: "Plantões que faltam", texto: plantoes },
 tempo: { titulo: "Tempo até parar", texto: tempo },
 renda: { titulo: "Quanto você quer receber por mês", texto: "O valor que você informou. Tudo na simulação está em valores de hoje." },
-necessario: { titulo: "Quanto precisa ter investido", texto: `Com esse valor investido, rendendo ${taxa}, só o rendimento paga ${moeda(d.rendaDesejada)} por mês, sem mexer no dinheiro.` },
+necessario: { titulo: "Quanto precisa ter investido", texto: `Multiplicamos a renda que você quer por ${MULTIPLICADOR_META}: ${moeda(d.rendaDesejada)} × ${MULTIPLICADOR_META} = ${moeda(c.necessario)}. Retirar ${moeda(d.rendaDesejada)} por mês é 0,4% desse valor, menos do que ele rende, então o dinheiro não acaba.` },
 pagos: { titulo: "Quanto seus investimentos já rendem", texto: pagos },
 };
 }
@@ -557,7 +559,7 @@ $id("i-pagos-sub").textContent = d.patrimonio === 0
 $id("c-renda").textContent = `${moeda(d.rendaDesejada)}/mês`;
 $id("c-necessario").textContent = moedaCurta(c.necessario);
 $id("c-necessario-exp").textContent =
-`Só o rendimento paga os ${moeda(d.rendaDesejada)}/mês, sem mexer no dinheiro.`;
+`${moeda(d.rendaDesejada)}/mês × ${MULTIPLICADOR_META}. Assim a renda sai do rendimento, sem consumir o patrimônio.`;
 $id("c-tem").textContent = moedaCurta(d.patrimonio);
 if (c.metaAtingida) {
 $id("c-tem-exp").textContent = "Já é o suficiente. Não falta nada.";
